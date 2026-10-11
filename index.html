@@ -80,10 +80,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--cobalt); outlin
 .t.in { animation: pop .9s var(--ease) backwards; animation-delay: var(--d, 0ms); }
 @keyframes pop { from { transform: translateY(30px) scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
 
-.t-name { grid-column: span 8; grid-row: span 3; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
+.t-name { grid-column: span 8; grid-row: span 3; display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; container-type: inline-size; }
 .t-name .hi { font-family: var(--mono); font-size: .8rem; color: var(--muted); display: flex; align-items: center; gap: 8px; }
 .t-name .hi i { width: 8px; height: 8px; border-radius: 50%; background: #1FB36B; box-shadow: 0 0 0 4px color-mix(in srgb, #1FB36B 25%, transparent); }
-h1 { font-family: var(--wide); font-weight: 900; font-stretch: 125%; text-transform: uppercase; letter-spacing: -.035em; line-height: .88; margin: 0; font-size: clamp(2.4rem, 7.4vw, 7rem); }
+h1 { font-family: var(--wide); font-weight: 900; font-stretch: 125%; text-transform: uppercase; letter-spacing: -.035em; line-height: .88; margin: 0; font-size: clamp(2rem, 13cqi, 8rem); white-space: nowrap; }
 h1 .ln { display: block; overflow: hidden; }
 h1 .ln > span { display: inline-block; animation: up 1.1s var(--ease) both; animation-delay: var(--d); }
 h1 .serif { font-size: 1.08em; color: var(--cobalt); }
@@ -834,6 +834,22 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
   }
   if (!reduce) requestAnimationFrame(bgFrame);
   else shapes.forEach(function (o) { o.el.style.transform = 'translate(' + (o.x * innerWidth - o.s / 2) + 'px,' + (o.y * innerHeight) + 'px)'; });
+
+  /* fit the hero name to its tile so it is never clipped */
+  (function () {
+    var h = $('h1'); if (!h) return;
+    var lines = Array.prototype.slice.call(h.querySelectorAll('.ln > span'));
+    function fit() {
+      h.style.fontSize = '';
+      var size = parseFloat(getComputedStyle(h).fontSize), avail = h.clientWidth;
+      var widest = Math.max.apply(null, lines.map(function (l) { return l.scrollWidth; }));
+      if (widest > avail && widest > 0) h.style.fontSize = Math.floor(size * avail / widest * 0.98) + 'px';
+    }
+    fit();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    addEventListener('resize', fit);
+    addEventListener('load', fit);
+  })();
 
   /* split lead into words */
   var lead = $('#lead'), parts = [];
