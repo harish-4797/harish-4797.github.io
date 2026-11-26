@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Harish Nimmagadda</title>
-<meta name="description" content="Nimmagadda Harish, full-stack developer from Guntur, India. React, Node.js, MongoDB, AI pipelines and browser-based computer vision.">
+<meta name="description" content="Nimmagadda Harish, full-stack developer from Guntur, India. React, Next.js, Node.js, TypeScript, Python, PostgreSQL, LLM/RAG apps and browser-based computer vision.">
 <meta name="author" content="Nimmagadda Harish">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nimmagadda Harish | Full-stack Developer">
-<meta property="og:description" content="React, Node and MongoDB developer building WhatsApp campaign platforms, AI interview prep tools and AR in the browser.">
+<meta property="og:description" content="React, Node and MongoDB developer building WhatsApp campaign platforms, AI job-search automation and AR in the browser.">
 <meta property="og:image" content="og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#2B45F5">
@@ -351,23 +351,16 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
 .c-viz { position: relative; background: var(--vbg, var(--lilac)); color: var(--on-block); overflow: hidden; min-height: 280px; display: grid; place-items: center; padding: 28px; }
 @media (max-width: 899px) { .card { grid-template-columns: 1fr; } .c-viz { order: -1; min-height: 240px; } }
 
-/* viz: interview kit */
-.kit { width: 100%; max-width: 380px; display: grid; gap: 14px; }
-.matrix { background: rgba(255,255,255,.55); border-radius: 18px; padding: 14px 16px; font-family: var(--mono); font-size: .72rem; }
-.matrix .mh { display: flex; justify-content: space-between; margin-bottom: 8px; opacity: .7; text-transform: uppercase; letter-spacing: .08em; }
-.mrow { display: grid; grid-template-columns: 4.2rem 1fr auto; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px dashed rgba(16,17,22,.15); }
-.mrow .tagm { font-size: .62rem; padding: 2px 6px; border-radius: 6px; background: var(--on-block); color: #fff; text-align: center; }
-.mrow .tagn { font-size: .62rem; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--on-block); text-align: center; }
-.mrow .ok { width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; background: #1FB36B; color: #fff; font-size: .65rem; animation: tick 6s infinite; animation-delay: var(--t); }
-@keyframes tick { 0%, 8% { transform: scale(0); } 16%, 90% { transform: scale(1); } 100% { transform: scale(0); } }
-.flip { perspective: 900px; height: 110px; }
-.flip-in { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; animation: flip 6s infinite var(--ease); }
-.face { position: absolute; inset: 0; border-radius: 18px; padding: 14px 16px; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; justify-content: space-between; }
-.face.f { background: var(--on-block); color: #fff; }
-.face.b { background: #fff; color: var(--on-block); transform: rotateY(180deg); }
-.face small { font-family: var(--mono); font-size: .62rem; opacity: .65; text-transform: uppercase; letter-spacing: .08em; }
-.face span { font-weight: 600; font-size: .95rem; line-height: 1.25; }
-@keyframes flip { 0%, 40% { transform: none; } 50%, 90% { transform: rotateY(180deg); } 100% { transform: rotateY(360deg); } }
+
+/* viz: jobsprint */
+.sprint { width: 100%; max-width: 360px; display: grid; gap: 8px; }
+.sprint .sh { display: flex; justify-content: space-between; font-family: var(--mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .08em; opacity: .7; padding: 0 2px; }
+.srow { display: grid; grid-template-columns: 4.8rem 1fr; align-items: center; gap: 10px; background: rgba(255,255,255,.6); border-radius: 12px; padding: 9px 12px; font-family: var(--mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .06em; }
+.srow .fb { height: 8px; border-radius: 4px; background: rgba(16,17,22,.12); position: relative; overflow: hidden; }
+.srow .fb::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: var(--w); border-radius: 4px; background: var(--on-block); transform-origin: 0 50%; animation: fillx 5s infinite var(--ease); animation-delay: var(--t); }
+.srow.ap .fb::after { background: var(--cobalt); }
+.wa { justify-self: end; max-width: 85%; margin-top: 4px; background: #D9FDD3; color: #101116; font-size: .78rem; padding: 8px 11px; border-radius: 14px; box-shadow: 0 12px 24px -14px rgba(16,17,22,.4); animation: msg 8s infinite var(--ease); animation-delay: 2s; }
+.wa small { display: block; text-align: right; font-size: .6rem; color: #34B7F1; margin-top: 2px; }
 
 /* viz: chat */
 .phone { width: 100%; max-width: 300px; background: #fff; border-radius: 26px; padding: 14px; box-shadow: 0 20px 40px -20px rgba(16,17,22,.4); display: flex; flex-direction: column; gap: 8px; color: #101116; }
@@ -505,11 +498,11 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
           <span class="ln"><span style="--d:.22s">Harish</span></span>
         </h1>
         <div style="display:grid;gap:1.1rem">
-          <p>Full-stack developer shipping production features in <b>React, Node and MongoDB</b>, from WhatsApp campaign platforms to <b>AI pipelines</b> and <b>computer vision</b> that runs in the browser.</p>
+          <p>Full-stack developer building with <b>React, Next.js, Node, TypeScript and Python</b>, from WhatsApp automation and <b>AI job search</b> to <b>RAG travel planning</b> and <b>computer vision</b> that runs in the browser.</p>
           <div class="hero-actions">
             <button class="btn2 fill cv-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download CV</button>
             <button class="btn2" type="button" data-intro>▶ Watch intro</button>
-            <button class="btn2" type="button" data-case="prepkit">Read a case study</button>
+            <button class="btn2" type="button" data-case="jobsprint">Read a case study</button>
             <a class="btn2" href="https://www.linkedin.com/in/harish-nimmagadda-30a3471a6/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3s-2.12 1.43-2.12 2.9V21H9z"/></svg>LinkedIn</a>
             <a class="btn2" href="https://github.com/harish-4797" target="_blank" rel="noopener" aria-label="GitHub profile"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
           </div>
@@ -557,9 +550,9 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
         <button class="play-intro" type="button" data-intro><i>▶</i>Watch my intro</button>
       </div>
 
-      <a class="t t-clock in" style="--d:200ms" href="https://github.com/harish-4797/Interview_preparation_kit" target="_blank" rel="noopener">
+      <a class="t t-clock in" style="--d:200ms" href="#case-jobsprint" data-case="jobsprint">
         <span class="lab">Latest build</span>
-        <span class="clock">Interview Prep Kit on GitHub<i>↗</i></span>
+        <span class="clock">JobSprintAI case study<i>→</i></span>
       </a>
 
       <div class="t t-role in" style="--d:260ms">
@@ -569,7 +562,7 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
 
       <div class="t t-stack in" style="--d:320ms">
         <span class="lab">Daily stack</span>
-        <ul class="chips"><li>React</li><li>TypeScript</li><li>Next.js</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Tailwind</li><li>MediaPipe</li><li>LLMs</li><li>n8n</li></ul>
+        <ul class="chips"><li>React</li><li>TypeScript</li><li>Next.js</li><li>Node.js</li><li>Python</li><li>PostgreSQL</li><li>MongoDB</li><li>Tailwind</li><li>LLMs</li><li>n8n</li></ul>
       </div>
 
       <a class="t t-cta in" href="#work" style="--d:380ms">
@@ -593,7 +586,7 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
         <div class="nums">
           <div class="num rv"><div class="v"><span class="count" data-to="1.5" data-dec="1">1.5</span>+</div><p>Years building in industry</p></div>
           <div class="num rv" style="--d:80ms"><div class="v"><span class="count" data-to="5">5</span></div><p>Projects featured below</p></div>
-          <div class="num rv" style="--d:160ms"><div class="v"><span class="count" data-to="20">20</span>+</div><p>Tools &amp; technologies</p></div>
+          <div class="num rv" style="--d:160ms"><div class="v"><span class="count" data-to="30">30</span>+</div><p>Tools &amp; technologies</p></div>
           <div class="num rv" style="--d:240ms"><div class="v"><span class="count" data-to="3">3</span></div><p>Roles, intern to developer</p></div>
         </div>
       </div>
@@ -608,32 +601,25 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
       <div class="stack" id="stack">
         <article class="card" style="--i:0">
           <div class="c-text">
-            <div class="c-top"><span>Full-stack · AI pipeline</span><span class="feat">Featured</span></div>
-            <h3>Interview <span class="serif">Prep</span> Kit</h3>
-            <p>Paste a job description and a company URL, and it builds a verified, personalized prep kit: company brief, role breakdown, question bank, flashcards and a day-by-day study plan.</p>
+            <div class="c-top"><span>Full-stack · AI automation</span><span class="feat">Featured</span></div>
+            <h3>JobSprint<span class="serif">AI</span></h3>
+            <p>An AI job search and auto-apply platform for C2C consultants. Every morning it finds fresh contract jobs, tailors each resume, queues applications for approval and sends every consultant their job list on WhatsApp.</p>
             <ul class="pts">
-              <li>11-step pipeline with a robots.txt-aware crawler and gap-closing passes</li>
-              <li>Code-only coverage matrix so no must-have requirement goes uncovered</li>
-              <li>Spaced-repetition practice mode and a scored mock interview simulator</li>
+              <li>Python pipeline across 30+ job portals and APIs into PostgreSQL, with C2C classification and cross-source dedupe</li>
+              <li>LLM resume tailoring with ATS scoring that keeps the original Word design</li>
+              <li>Two-way WhatsApp inbox, live over Postgres LISTEN/NOTIFY and SSE</li>
             </ul>
-            <div class="c-foot">
-              <ul class="chips"><li>Next.js</li><li>TypeScript</li><li>Express</li><li>MongoDB</li><li>Gemini</li><li>Groq</li><li>Cheerio</li><li>Jest</li></ul>
-              <div class="c-actions"><button class="cs-btn" type="button" data-case="prepkit">Read case study →</button>
-              <a class="gh" href="https://github.com/harish-4797/Interview_preparation_kit" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>View on GitHub ↗</a></div>
-            </div>
+            <div class="c-foot"><ul class="chips"><li>Next.js</li><li>TypeScript</li><li>Python</li><li>PostgreSQL</li><li>OpenRouter</li><li>n8n</li><li>Playwright</li><li>AWS</li></ul><button class="cs-btn" type="button" data-case="jobsprint">Read case study →</button></div>
           </div>
           <div class="c-viz" style="--vbg:var(--butter)">
-            <div class="kit">
-              <div class="matrix">
-                <div class="mh"><span>Coverage matrix</span><span>req → questions</span></div>
-                <div class="mrow"><span class="tagm">MUST</span><span>REST API design</span><span class="ok" style="--t:.2s">✓</span></div>
-                <div class="mrow"><span class="tagm">MUST</span><span>React state mgmt</span><span class="ok" style="--t:.6s">✓</span></div>
-                <div class="mrow"><span class="tagn">NICE</span><span>CI / CD basics</span><span class="ok" style="--t:1s">✓</span></div>
-              </div>
-              <div class="flip"><div class="flip-in">
-                <div class="face f"><small>Flashcard · technical</small><span>How would you make a webhook handler idempotent?</span></div>
-                <div class="face b"><small>Answer outline</small><span>Store event IDs, check before processing, return 200 on duplicates.</span></div>
-              </div></div>
+            <div class="sprint">
+              <div class="sh"><span>Daily run</span><span>06:00</span></div>
+              <div class="srow"><span>Find</span><span class="fb" style="--w:100%;--t:0s"></span></div>
+              <div class="srow"><span>C2C only</span><span class="fb" style="--w:62%;--t:.4s"></span></div>
+              <div class="srow"><span>Dedupe</span><span class="fb" style="--w:44%;--t:.8s"></span></div>
+              <div class="srow"><span>Tailor</span><span class="fb" style="--w:44%;--t:1.2s"></span></div>
+              <div class="srow ap"><span>Approve</span><span class="fb" style="--w:36%;--t:1.6s"></span></div>
+              <div class="wa">Your C2C job report for today is ready<small>✓✓</small></div>
             </div>
           </div>
         </article>
@@ -702,22 +688,22 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
 
         <article class="card" style="--i:4">
           <div class="c-text">
-            <div class="c-top"><span>Generative AI</span><span>Side project</span></div>
-            <h3>AI Travel <span class="serif">Planner</span></h3>
-            <p>A wizard-style planner that turns a destination and budget into a personalized multi-day itinerary using Groq.</p>
+            <div class="c-top"><span>Generative AI · RAG</span><span>Side project</span></div>
+            <h3>Voyager<span class="serif">AI</span></h3>
+            <p>A RAG-powered travel planner that builds budget-aware multi-day itineraries grounded in real places, with day maps, rain warnings and drag-and-drop editing.</p>
             <ul class="pts">
-              <li>Budget estimates and location-based recommendations</li>
-              <li>Step-by-step flow for destination, budget and preferences</li>
-              <li>Saved trips persist locally with React Query and React Router</li>
+              <li>Retrieves real places from Wikipedia and OpenStreetMap, ranked with hybrid search (BM25 + in-browser MiniLM)</li>
+              <li>Checks every LLM-cited stop against its source: 87–100% verified</li>
+              <li>Supabase auth with Row Level Security, and the API key kept behind a rate-limited serverless proxy</li>
             </ul>
-            <div class="c-foot"><ul class="chips"><li>React</li><li>Vite</li><li>Tailwind</li><li>Groq</li><li>React Query</li><li>shadcn/ui</li></ul><button class="cs-btn" type="button" data-case="travel">Read case study →</button></div>
+            <div class="c-foot"><ul class="chips"><li>React</li><li>Vite</li><li>Groq</li><li>RAG</li><li>Transformers.js</li><li>Supabase</li><li>Leaflet</li><li>Vercel</li></ul><button class="cs-btn" type="button" data-case="travel">Read case study →</button></div>
           </div>
           <div class="c-viz" style="--vbg:var(--cobalt)">
             <div class="trip">
               <div class="stop" style="--t:0s"><b>DAY<br>1</b><span>Old town walk<small>Morning · ₹ low</small></span></div>
               <div class="stop" style="--t:.5s"><b>DAY<br>2</b><span>Coastal drive<small>Full day · ₹₹</small></span></div>
               <div class="stop" style="--t:1s"><b>DAY<br>3</b><span>Night food market<small>Evening · ₹</small></span></div>
-              <em style="color:#fff">// sample itinerary preview</em>
+              <em style="color:#fff">// sample preview · every stop checked against its source</em>
             </div>
           </div>
         </article>
@@ -730,9 +716,9 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
       <div class="eyebrow rv"><b>03</b>Experience</div>
       <h2 class="rv">Where I've <span class="serif">worked</span></h2>
       <div class="xp">
-        <div class="row rv" style="--fill:var(--butter)"><span class="when">01/2026 — Now</span><h3>Junior Developer <span class="now">NOW</span></h3><span class="org">Suthra Technologies Inc<br>Vijayawada, AP</span></div>
-        <div class="row rv" style="--fill:var(--mint)"><span class="when">07/2025 — 12/2025</span><h3>Software Intern</h3><span class="org">Suthra Technologies Inc<br>Vijayawada, AP</span></div>
-        <div class="row rv" style="--fill:var(--lilac)"><span class="when">02/2025 — 06/2025</span><h3>Data Analyst Trainee</h3><span class="org">Codegnan<br>Hyderabad</span></div>
+        <div class="row rv" style="--fill:var(--butter)"><span class="when">01/2026 — Now</span><h3>Junior Software Developer <span class="now">NOW</span></h3><span class="org">Suthra Technologies Pvt Ltd<br>Vijayawada, AP</span></div>
+        <div class="row rv" style="--fill:var(--mint)"><span class="when">07/2025 — 12/2025</span><h3>Intern</h3><span class="org">Suthra Technologies Pvt Ltd<br>Vijayawada, AP</span></div>
+        <div class="row rv" style="--fill:var(--lilac)"><span class="when">02/2025 — 06/2025</span><h3>Data Analyst Trainee</h3><span class="org">Codegnan IT Solutions<br>Hyderabad</span></div>
       </div>
     </div>
   </section>
@@ -742,10 +728,10 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
       <div class="eyebrow rv"><b>04</b>Skills</div>
       <h2 class="rv">The <span class="serif">toolkit</span></h2>
       <div class="sk-grid">
-        <div class="sk rv"><h3>Front<br>end</h3><ul class="chips"><li>React.js</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>Tailwind</li><li>Vite</li></ul></div>
-        <div class="sk rv" style="--d:80ms"><h3>Back<br>end</h3><ul class="chips"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>REST APIs</li><li>Webhooks</li><li>JWT</li></ul></div>
-        <div class="sk rv" style="--d:160ms"><h3>AI &amp;<br>vision</h3><ul class="chips"><li>Generative AI</li><li>LLMs</li><li>RAG</li><li>AI Agents</li><li>n8n</li><li>Computer Vision</li><li>MediaPipe</li></ul></div>
-        <div class="sk rv" style="--d:240ms"><h3>Tools &amp;<br>soft</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>Postman</li><li>Problem solving</li><li>Analytical thinking</li><li>Teamwork</li></ul></div>
+        <div class="sk rv"><h3>Front<br>end</h3><ul class="chips"><li>React.js</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li><li>Tailwind CSS</li><li>Vite</li><li>Zustand</li><li>HTML5 Canvas</li><li>Leaflet</li></ul></div>
+        <div class="sk rv" style="--d:80ms"><h3>Back end<br>&amp; data</h3><ul class="chips"><li>Node.js</li><li>Express.js</li><li>Python</li><li>SQL</li><li>REST APIs</li><li>Webhooks</li><li>JWT Auth</li><li>SMTP/IMAP</li><li>PostgreSQL</li><li>MongoDB</li><li>Supabase (RLS)</li></ul></div>
+        <div class="sk rv" style="--d:160ms"><h3>AI &amp;<br>vision</h3><ul class="chips"><li>Generative AI</li><li>LLMs</li><li>RAG</li><li>Prompt Engineering</li><li>Hybrid Search</li><li>Groq API</li><li>OpenRouter</li><li>Transformers.js</li><li>Computer Vision</li><li>MediaPipe</li></ul></div>
+        <div class="sk rv" style="--d:240ms"><h3>Automation<br>&amp; DevOps</h3><ul class="chips"><li>WhatsApp Cloud API</li><li>n8n</li><li>Playwright</li><li>WebRTC</li><li>Docker</li><li>Vercel</li><li>Git</li><li>GitHub</li><li>Postman</li></ul></div>
       </div>
     </div>
   </section>
@@ -792,7 +778,7 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
         <div class="iv-scene"><p class="big">Hi, I'm <span class="serif">Harish</span> 👋</p></div>
         <div class="iv-scene"><p class="big">Full-stack <span class="serif">developer</span></p><p class="sub">Junior Software Developer at Suthra Technologies · Guntur, India</p></div>
         <div class="iv-scene"><p class="big">React <span class="serif">&amp;</span> Node</p><div class="iv-chips"><span class="y">React</span><span class="p">Node.js</span><span class="m">TypeScript</span><span class="l">MongoDB</span><span>Next.js</span></div></div>
-        <div class="iv-scene"><p class="big">What I <span class="serif">build</span></p><div class="iv-chips"><span class="m">WhatsApp campaign platforms</span><span class="y">AI interview prep</span><span class="l">Browser AR try-on</span></div></div>
+        <div class="iv-scene"><p class="big">What I <span class="serif">build</span></p><div class="iv-chips"><span class="m">WhatsApp campaign platforms</span><span class="y">AI-powered apps</span><span class="l">Browser AR try-on</span></div></div>
         <div class="iv-scene"><p class="big">Let's <span class="serif">talk</span></p><div class="iv-cta"><button type="button" data-iv="work">See my work</button><button type="button" class="cv-btn">Download CV</button><button type="button" data-iv="replay" aria-label="Replay intro">↺ Replay</button></div></div>
       </div>
       <div class="iv-cap" id="ivCap"></div>
@@ -994,28 +980,27 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
   function steps(list) { return list.map(function (s) { return '<div class="step"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>'; }).join(''); }
 
   var CASES = {
-    prepkit: {
-      bg: 'var(--butter)', tag: 'Full-stack · AI pipeline · Assessment project', title: 'Interview Prep Kit',
-      summary: 'Turns a job description and a company website into a personalized, verified interview prep kit, built to Trao’s full-stack engineering assessment brief.',
-      problem: 'Generic interview prep wastes time, and AI-generated study material can quietly skip the requirements a role cares about most. Candidates need prep tied to one role at one company, with proof that nothing important was missed.',
-      built: 'A Next.js app and an Express/TypeScript backend that take a job description, a company URL and a number of prep days. It returns a company brief, a role breakdown, a categorized question bank with answer outlines, flashcards, and a day-by-day study plan, plus a practice mode and a scored mock interview.',
-      diagramTitle: 'The 11-step pipeline',
-      diagram: '<div class="phases">' +
-        '<div class="phase" style="background:var(--mint)"><h5>Research</h5>' + steps([[1, 'Ingest JD, URL and prep days'], [2, 'Extract requirements (must / nice)'], [3, 'Crawl company site'], [4, 'Analyse public interview discussions'], [5, 'Compile company brief']]) + '</div>' +
-        '<div class="phase" style="background:var(--lilac)"><h5>Generate</h5>' + steps([[6, 'Finalise role breakdown'], [7, 'Generate questions per category'], [8, 'Generate linked flashcards']]) + '</div>' +
-        '<div class="phase" style="background:var(--peach)"><h5>Verify</h5>' + steps([[9, 'Deterministic coverage check'], [10, 'Gap-closing pass']]) + '<div class="loop">↺ steps 7–10 repeat up to 3× until every must-have is covered</div></div>' +
-        '<div class="phase" style="background:var(--butter)"><h5>Plan</h5>' + steps([[11, 'Allocate day-by-day schedule, hardest and must-haves first']]) + '</div>' +
+    jobsprint: {
+      bg: 'var(--butter)', tag: 'Full-stack · AI automation · Data pipeline', title: 'JobSprintAI',
+      summary: 'An AI-powered job search and auto-apply platform that runs the daily job hunt for a team of C2C IT consultants, from finding the job to applying for it.',
+      problem: 'Recruiters handling several consultants spent hours every day searching the same job boards for each person, separating C2C and contract roles from W2 and full-time, rewriting resumes for every job description, sending applications one by one and sharing job lists by hand.',
+      built: 'A Next.js platform with a Python data pipeline behind it. Every morning it collects fresh C2C jobs from 30+ portals, APIs and career sites, matches them to each consultant’s titles, tailors resumes with LLMs and drafts applications that an admin approves before they go out. Each consultant gets a daily job report on WhatsApp, a two-way inbox with the team, and a portal showing only their own jobs. I’m now extending it with API-driven resume screening that builds recruiter shortlists, and an assessment portal with HR-set or AI-generated questions.',
+      diagramTitle: 'How a day runs',
+      diagram: '<div class="flow-wrap">' +
+        row('Every morning', [n('30+ job sources', 'Indeed, LinkedIn, Dice, APIs', 'c'), n('Python pipeline', 'JobSpy + Pandas', 'k'), n('C2C filter + dedupe', '60-day repeat check', 'k'), n('PostgreSQL', 'jobs per consultant')]) +
+        row('Per job', [n('ATS score + tailor', 'OpenRouter LLMs, n8n', 'c'), n('Approval queue', 'admin reviews', 'k'), n('Apply', 'SMTP drafts, Playwright forms', 'k'), n('Replies', 'IMAP inbox')]) +
+        row('Real time', [n('Meta webhooks', 'WhatsApp messages', 'c'), n('Postgres trigger', 'LISTEN / NOTIFY', 'k'), n('Server-Sent Events', 'no polling', 'k'), n('Live inbox', 'browser')]) +
         '</div>',
       decisions: [
-        ['Coverage checked in code, not by the LLM.', 'A set-difference over requirement IDs proves every must-have has questions; gaps trigger targeted regeneration.'],
-        ['Category-isolated generation.', 'Technical, behavioural and domain questions are generated separately so the sets don’t bleed into each other.'],
-        ['A careful crawler.', 'Keyword-ranked links, robots.txt respected, private and loopback addresses blocked, 8-second timeouts and a 2 MB cap.'],
-        ['Edits survive regeneration.', 'Reordered, edited and pinned items are preserved when a section is regenerated.'],
-        ['Provider-agnostic LLM layer.', 'Gemini and Groq sit behind one adapter, with an offline mock engine for tests and a MongoDB-or-memory store.'],
-        ['Tested and batch-ready.', 'Jest suites cover the scheduler, coverage, validator, state, crawler and API; a CLI evaluates many cases without a database.']
+        ['Real-time without polling.', 'PostgreSQL triggers fire NOTIFY events that the server streams to the browser over SSE, so new WhatsApp messages appear instantly.'],
+        ['Repost detection.', 'Jobs are matched on normalized title, company and location, which catches the same job re-posted under a new link or on another site.'],
+        ['Fair API usage.', 'Each paid API’s daily limit is split equally between consultants and spread across the month.'],
+        ['Working with WhatsApp’s 24-hour rule.', 'If a consultant hasn’t messaged recently, their report waits and is delivered automatically once they do.'],
+        ['Two-way media.', 'Incoming media is fetched through Meta’s short-lived URLs and stored on S3; outgoing files are checked against WhatsApp’s type and size limits first.'],
+        ['Tailoring that keeps the design.', 'LLMs rewrite the summary, skills and experience while the original Word layout is preserved, with matching Word and PDF downloads.'],
+        ['A human in the loop.', 'Every application passes through an admin approval queue before it is sent.']
       ],
-      stack: ['Next.js', 'Tailwind CSS', 'Node.js', 'Express', 'TypeScript', 'MongoDB', 'Gemini', 'Groq', 'Cheerio', 'Jest'],
-      repo: 'https://github.com/harish-4797/Interview_preparation_kit'
+      stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Python', 'Pandas', 'JobSpy', 'PostgreSQL', 'OpenRouter', 'n8n', 'Playwright', 'Nodemailer', 'ImapFlow', 'WhatsApp Cloud API', 'Docker', 'AWS', 'GitHub Actions']
     },
     chat: {
       bg: 'var(--mint)', tag: 'Full-stack · Suthra Technologies', title: 'SuthraChat',
@@ -1071,24 +1056,28 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
       stack: ['React', 'Vite', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'REST APIs', 'HTML5', 'CSS3']
     },
     travel: {
-      bg: 'var(--cobalt)', tag: 'Generative AI · Side project', title: 'AI Travel Planner',
-      summary: 'A responsive planner that turns a destination and budget into a personalized multi-day itinerary.',
-      problem: 'Planning a multi-day trip means hours of tabs, guesswork on costs and itineraries that ignore your budget.',
-      built: 'A React and Vite app with a wizard that collects destination, budget and preferences, then uses Groq to generate a day-by-day itinerary with budget estimates and location-based recommendations. Trips are saved locally and can be revisited.',
-      diagramTitle: 'From inputs to itinerary',
+      bg: 'var(--cobalt)', tag: 'Generative AI · RAG · Side project', title: 'VoyagerAI',
+      summary: 'A RAG-powered travel planner that generates budget-aware multi-day itineraries grounded in real places.',
+      problem: 'LLM travel plans read well but often invent places, ignore the budget and give you no way to check them. Planning a trip still meant hours of tabs to confirm that each stop actually exists.',
+      built: 'A React and Vite app that retrieves real places from Wikipedia and OpenStreetMap, ranks them with hybrid search, and has a Groq LLM build a day-by-day itinerary from that context. Every stop the model cites is verified against its source. Trips get day maps, rain warnings and drag-and-drop editing, and are stored in Supabase behind sign-in.',
+      diagramTitle: 'Retrieve, generate, verify',
       diagram: '<div class="flow-wrap">' +
-        row('', [n('Trip wizard', 'destination → budget → preferences'), n('Groq LLM', 'itinerary generation', 'c'), n('Itinerary view', 'days, costs, recommendations', 'k'), n('Saved trips', 'localStorage')]) +
+        row('Retrieve', [n('Wikipedia + OpenStreetMap', 'real places', 'c'), n('Hybrid search', 'BM25 + MiniLM embeddings', 'k'), n('Ranked places', 'grounding context')]) +
+        row('Generate', [n('Groq LLM', 'budget-aware itinerary', 'c'), n('Citation check', 'every stop vs its source', 'k'), n('Itinerary', 'day maps, rain warnings, drag-and-drop')]) +
+        row('Secure', [n('Signed-in user', 'Supabase auth', 'c'), n('Serverless proxy', 'rate-limited, key server-side', 'k'), n('Supabase Postgres', 'Row Level Security')]) +
         '</div>',
       decisions: [
-        ['Wizard-first input.', 'Structured steps give the model clear, complete inputs instead of a vague free-text prompt.'],
-        ['Fast inference.', 'Groq keeps generation quick enough to feel interactive.'],
-        ['Smooth data flow.', 'React Query manages requests and caching; React Router gives each view its own route.'],
-        ['Accessible UI.', 'Radix UI and shadcn/ui components keep the interface consistent and accessible.']
+        ['Grounded in real places.', 'The model plans from places retrieved from Wikipedia and OpenStreetMap instead of inventing them.'],
+        ['Hybrid search in the browser.', 'BM25 keyword scoring is combined with MiniLM embeddings run client-side through Transformers.js, so ranking needs no embedding server.'],
+        ['Verify, don’t trust.', 'Every stop the LLM cites is checked against its source, with 87–100% of stops verified.'],
+        ['API key never reaches the browser.', 'Model calls go through a signed-in, rate-limited serverless proxy on Vercel.'],
+        ['Per-user data isolation.', 'Supabase PostgreSQL with Row Level Security means users can only read and write their own trips.'],
+        ['Editable output.', 'Day maps with Leaflet, rain warnings and drag-and-drop let people adjust the plan instead of regenerating it.']
       ],
-      stack: ['React', 'Vite', 'Tailwind CSS', 'Groq', 'React Query', 'React Router', 'Radix UI', 'shadcn/ui']
+      stack: ['React', 'Vite', 'Tailwind CSS', 'Groq', 'OpenRouter', 'RAG', 'Transformers.js', 'Supabase (PostgreSQL)', 'Leaflet', 'Vercel']
     }
   };
-  var ORDER = ['prepkit', 'chat', 'ar', 'reach', 'travel'];
+  var ORDER = ['jobsprint', 'chat', 'ar', 'reach', 'travel'];
   var cs = $('#cs'), csPanel = $('#csPanel'), lastFocus = null;
   function esc(s) { return s; }
   function openCase(key) {
@@ -1107,7 +1096,7 @@ h2 .serif { color: var(--cobalt); font-size: 1.1em; }
         '<div class="cs-foot">' + (c.repo ? '<a class="gh" href="' + c.repo + '" target="_blank" rel="noopener">' + GH + 'View on GitHub ↗</a>' : '<span class="cv-note">Code is private (company project).</span>') +
           '<div class="cs-nav"><button class="btn2" type="button" data-go="' + prev + '">← ' + CASES[prev].title + '</button><button class="btn2" type="button" data-go="' + next + '">' + CASES[next].title + ' →</button></div></div>' +
       '</div>';
-    if (key !== 'prepkit' && key !== 'travel') csPanel.querySelector('.cs-foot .cv-note').textContent = key === 'ar' ? 'Code available on request.' : 'Code is private (company project).';
+    if (key !== 'travel') csPanel.querySelector('.cs-foot .cv-note').textContent = key === 'ar' ? 'Code available on request.' : key === 'jobsprint' ? 'Code is private: the platform holds real candidate data.' : 'Code is private (company project).';
     if (key === 'travel' && !c.repo) csPanel.querySelector('.cs-foot .cv-note').textContent = 'Code available on request.';
     if (cs.hidden) { lastFocus = document.activeElement; }
     cs.hidden = false; document.body.classList.add('locked'); cs.scrollTop = 0;
